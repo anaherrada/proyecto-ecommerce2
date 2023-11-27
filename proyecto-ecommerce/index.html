@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio.</title>
+    <link rel="stylesheet" href="style/inicio.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <script src="script.js" defer></script>
+</head>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="logo">
+            <img src="IMAGENES\imagenes-inicio\zapatillas.png" alt="FootRunner">
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="about_us.html">Acerca de</a>
+            <a href="contactanos.html">Contáctanos</a>
+            <a href="sec_hombres.html">Hombres</a>
+            <a href="sec_mujeres.html">Mujeres</a>
+            <a href="sec_niños.html">Niños</a>
+            <a href="sec_ofertas.html">Ofertas</a>
+        </nav>
+    </div>
+    <section class="encabezado">
+        <h1>FootRunner</h1>
+        <h2>¡Tu decides como dar tus pasos!</h2>
+    </section>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slide">
+                <img src= "IMAGENES/imagenes-inicio/boys-5630669_640.jpg" alt="Niños">
+            </div>
+            <div class="slide">
+                <img src="IMAGENES/imagenes-inicio/mujer.jpg.jpg"  alt="Mujer">
+            </div>
+            <div class="slide">
+                <img src="IMAGENES/imagenes-inicio/man-2604149_1280.jpg" alt="Hombre">
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const carousel = document.querySelector(".carousel");
+            const slides = document.querySelectorAll(".slide");
+
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                const newTransformValue = -currentIndex * 100 + "%";
+                carousel.style.transform = "translateX(" + newTransformValue + ")";
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateCarousel();
+            }
+
+            setInterval(nextSlide, 3000);
+        });
+    </script>
+
+    <div class="guarda">
+        <img src="IMAGENES\imagenes-inicio\guarda\guarda 1 fila.jpg" alt="Imagen 1">
+        <img src="IMAGENES\imagenes-inicio\guarda\guarda 2 fila.jpg" alt="Imagen 2">
+    </div>
+    <footer class="social-footer">
+        <a href="https://www.facebook.com/profile.php?id=61552403052276" class="social-icon"><img src="IMAGENES/imagenes-inicio/redes/facebook.png" alt="Equipo 1"></a>
+        <a href="enlace_gorjeo.html" class="social-icon"><img src="IMAGENES/imagenes-inicio/redes/gorjeo.png" alt="Equipo 2"></a>
+        <a href="https://www.instagram.com/footrunnerok/" class="social-icon"><img src="IMAGENES/imagenes-inicio/redes/instagram (1).png" alt="Equipo 3"></a>
+    </footer>
+    
+</body>
+</html>
